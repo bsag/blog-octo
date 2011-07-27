@@ -106,7 +106,7 @@ module Jekyll
       dir = @context.registers[:site].config['category_dir']
       root_url = @context.registers[:site].config['root'].sub(/\/$/, '')
       categories = categories.sort!.map do |item|
-        "<a class='category' href='#{root_url}/#{dir}/#{item.gsub(/_|\W/, '-')}/'>#{item}</a>"
+        "<a class='category' href='/#{dir}/#{item.gsub(/_|\W/, '-')}/'>#{item}</a>"
       end
 
       case categories.length
