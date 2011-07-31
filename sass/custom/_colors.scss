@@ -1,7 +1,26 @@
 // Here you can easily change your sites's color scheme.
 // To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
 
-//$header-bg: #263347;
+$header-bg: #f8f8f8;
+$title-color: #222;
+$page-bg: #eee;
+
+/* Link colours */
+$link-color: #222;
+$link-color-hover: #FF6C07;
+
+/* Navigation bar */
+$nav-bg: #333;
+$nav-color: lighten($nav-bg, 70);
+$nav-color-hover: $link-color-hover;
+$nav-placeholder: desaturate(lighten($nav-bg, 10), 15);
+$nav-border: lighten($nav-bg, 10);
+$nav-border-top: darken($nav-bg, 15);
+$nav-border-bottom: lighten($nav-bg, 25);
+$nav-border-left: lighten($nav-bg, 11);
+$nav-border-right: darken($nav-bg, 7);
+
+
 //$subtitle-color: lighten($header-bg, 58);
 //$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
 //$sidebar-bg: desaturate(#eceff5, 8);

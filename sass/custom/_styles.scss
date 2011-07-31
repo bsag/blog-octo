@@ -1,2 +1,71 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+
+/* Over-ride fonts for Typekit */
+.heading {
+  font-family: "museo-slab-1", "museo-slab-2", Arial, Verdana, sans-serif;
+}
+
+.sans {
+  font-family: "museo-slab-1", "museo-slab-2", Arial, Verdana, sans-serif;
+}
+
+.serif {
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Palatino, Georgia, Times, serif;
+}
+
+
+/* Box shadow for main body */
+body {
+  -moz-box-shadow: 3px 3px 10px #CCC;
+  -webkit-box-shadow: 3px 3px 10px #CCC; 
+  -box-shadow: 3px 3px 10px #CCC;
+}  
+
+body > header {
+  background: $header-bg image-url('fruitbat-cropped.png') top left;
+  background-repeat: no-repeat;
+  padding-top: .8em;
+  padding-bottom: .8em;
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    margin-left: 4em;
+    font-size: 2em;
+    a, a:visited, a:hover {
+      color: $title_color;
+      text-decoration: none;
+    }
+  }
+  h2 {
+    // margin: .2em 0 0;
+    margin-left: 8em;
+    @extend .sans;
+    font-size: 1em;
+    color: $subtitle-color;
+    font-style: italic;
+  }
+}
+
+/* Sidebar social section with icons */
+
+#social {
+  ul { 
+     display: inline; 
+     margin-left: 0px;
+     padding-left: 0px;
+   }
+    a {
+      text-decoration: none;
+      border-bottom: none;
+        &:hover,&:active { text-decoration: none; border-bottom: none; }
+      }
+      li {
+        border-bottom: none;
+        float: left;
+      }
+        img { margin: 0px; padding: 0px; }
+}
+
+section { clear: left; }

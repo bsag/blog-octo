@@ -4,7 +4,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" manifest="default.appcache?v=1" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>{{site.title}}{% if page.title %}: {{page.title}}{% endif %}</title>
+  <title>{% if page.title %}{{site.short_title}} &raquo; {{page.title}}{% else %}{{site.title}}{% endif %}</title>
   <meta name="author" content="{{site.author}}">
   {% if page.description %}
     <meta name="description" content="{{page.description}}"/>
@@ -19,15 +19,16 @@
     <meta name="keywords" content="{{page.keywords}}"/>
   {% endif %}
 
-  <link href="{{ root_url }}/favicon.png" rel="shortcut icon" />
+  <link href="{{ root_url }}/favicon.ico" rel="shortcut icon" />
   <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
   <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
   <script src="{{ root_url }}/javascripts/octopress.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://use.typekit.com/pkq3bvb.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
-  <link href="{{ root_url }}/atom.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml"/>
-  {% include google_analytics.html %}
+  <link href="{{ root_url }}/feeds/recent_articles.xml" rel="alternate" title="{{site.title}}" type="application/atom+xml"/>
   {% include google_plus_one.html %}
   {% include twitter_sharing.html %}
 </head>
