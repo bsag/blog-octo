@@ -14,6 +14,10 @@
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Palatino, Georgia, Times, serif;
 }
 
+/* Override link typography for links within sup elements */
+sup a, sub a { font-size: 0.8em; position: relative;  display: inline-block; }
+sup a { top: -.5em; }
+sub a { bottom: -.5em; }
 
 /* Box shadow for main body */
 body {
@@ -23,7 +27,7 @@ body {
 }  
 
 body > header {
-  background: $header-bg image-url('fruitbat-cropped.png') top left;
+  background: $header-bg image-url('fruitbat-cropped.png') 25px 0px;
   background-repeat: no-repeat;
   padding-top: .8em;
   padding-bottom: .8em;
@@ -39,7 +43,6 @@ body > header {
     }
   }
   h2 {
-    // margin: .2em 0 0;
     margin-left: 8em;
     @extend .sans;
     font-size: 1em;
@@ -48,24 +51,30 @@ body > header {
   }
 }
 
-/* Sidebar social section with icons */
-
-#social {
-  ul { 
-     display: inline; 
-     margin-left: 0px;
-     padding-left: 0px;
-   }
-    a {
-      text-decoration: none;
-      border-bottom: none;
-        &:hover,&:active { text-decoration: none; border-bottom: none; }
-      }
-      li {
-        border-bottom: none;
-        float: left;
-      }
-        img { margin: 0px; padding: 0px; }
+.footnotes {
+  border-top: 1px solid #CCC; 
+  padding-top: 10px;
+  font-size: 0.8em;
+    li {
+      margin-left: 20px; line-height: 1em;
+        a { text-decoration: none; }
+      } 
 }
 
-section { clear: left; }
+/* Floating footnote DIV */
+#footnotediv {
+	position:absolute;
+	width:400px;
+	overflow:visible;
+}
+#footnotediv div {
+	background-color:white;
+	padding:3px;
+	padding-left:12px;
+	padding-right:12px;
+	border:1px solid #CDBBB5;
+	box-shadow:#555 0 0 10px;
+	-webkit-box-shadow:#555 0 0 10px;
+	-moz-box-shadow:0 0 10px #555;
+}
+

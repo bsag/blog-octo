@@ -30,7 +30,7 @@ code_dir: downloads/code
 category_dir: tags
 category_title_prefix: 'Tag: '
 category_meta_description_prefix: 'Tag: '
-markdown: rdiscount
+markdown: kramdown
 pygments: false
 
 paginate: 10 # Posts per page on the blog index

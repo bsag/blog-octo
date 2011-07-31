@@ -3,8 +3,8 @@ require "bundler/setup"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-document_root  = "~/website.com/"
+ssh_user       = "bsag@drake.joyent.us"
+document_root  = "~/web/public/blog"
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
@@ -73,6 +73,7 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
+  system "mvim #{filename}"
 end
 
 # usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
