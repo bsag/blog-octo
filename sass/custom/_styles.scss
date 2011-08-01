@@ -15,6 +15,11 @@
 }
 
 /* Override link typography for links within sup elements */
+
+i { font-style: italic; }
+b { font-weight: bold; }
+
+/* Styling of footnote indicators */
 sup a, sub a { font-size: 0.8em; position: relative;  display: inline-block; }
 sup a { top: -.5em; }
 sub a { bottom: -.5em; }
@@ -25,6 +30,12 @@ body {
   -webkit-box-shadow: 3px 3px 10px #CCC; 
   -box-shadow: 3px 3px 10px #CCC;
 }  
+
+
+@media only screen and (min-width: 992px) {
+  body { font-size: 1em; }
+  h1 { font-size: 2.0em; line-height: 1.2em; }
+}
 
 body > header {
   background: $header-bg image-url('fruitbat-cropped.png') 25px 0px;
@@ -51,30 +62,32 @@ body > header {
   }
 }
 
+article {
+  > footer.top {
+    padding-bottom: 1.5em;
+    margin-top: 2em;
+    @extend .sans;
+    p.meta {
+      margin-bottom: 0em;
+      // font-size: .85em;
+      color: $text-color-light;
+        a { color: $text-color-light; 
+          &:hover, &:active { color: $link-color-hover; }
+        }
+    }
+    .categories:before, .comments:before {
+      @extend .separator;
+    }
+  }
+}
+
 .footnotes {
   border-top: 1px solid #CCC; 
   padding-top: 10px;
-  font-size: 0.8em;
+  font-size: 0.9em;
     li {
       margin-left: 20px; line-height: 1em;
         a { text-decoration: none; }
       } 
-}
-
-/* Floating footnote DIV */
-#footnotediv {
-	position:absolute;
-	width:400px;
-	overflow:visible;
-}
-#footnotediv div {
-	background-color:white;
-	padding:3px;
-	padding-left:12px;
-	padding-right:12px;
-	border:1px solid #CDBBB5;
-	box-shadow:#555 0 0 10px;
-	-webkit-box-shadow:#555 0 0 10px;
-	-moz-box-shadow:0 0 10px #555;
 }
 

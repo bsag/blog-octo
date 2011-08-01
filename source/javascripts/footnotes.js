@@ -1,9 +1,5 @@
 // Slightly adapted from http://ignorethecode.net/blog/2010/04/20/footnotes/
 // this script requires jQuery
-$(document).ready(function() {
-    Footnotes.setup();
-});
-
 var Footnotes = {
     footnotetimeout: false,
     setup: function() {
@@ -31,15 +27,21 @@ var Footnotes = {
 
         var el = document.getElementById(id);
         div.html($(el).html());
+
+        div.css({
+            position:'absolute',
+            width:'400px',
+            opacity:0.9
+        });
         
         $(document.body).append(div);
 
         var left = position.left;
-        if(left + 420  > $(window).width() + $(window).scrollLeft())
-            left = $(window).width() - 420 + $(window).scrollLeft();
+        // if(left + 420  > $(window).width() + $(window).scrollLeft())
+        //     left = $(window).width() - 420 + $(window).scrollLeft();
         var top = position.top+20;
-        if(top + div.height() > $(window).height() + $(window).scrollTop())
-            top = position.top - div.height() - 15;
+        // if(top + div.height() > $(window).height() + $(window).scrollTop())
+        //     top = position.top - div.height() - 15;
         div.css({
             left:left,
             top:top,

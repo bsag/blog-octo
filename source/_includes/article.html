@@ -11,6 +11,13 @@
   </header>
 {% endunless %}
 {% if index %}
+  <footer class="top">
+    <p class="meta">
+      {% include post/date.html %}
+      {% include post/categories.html %}
+      <span class="comments"><a href="{{ site.url }}/blog{{ post.url }}/#disqus_thread">View comments</a></span>
+    </p>
+  </footer>
   <div class="entry-content">{{ content | excerpt }}</div>
   <footer>
     <a rel="full-article" href="{{ root_url }}{{ post.url }}/">Read on &rarr;</a>
