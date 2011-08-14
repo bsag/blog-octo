@@ -42,7 +42,7 @@ end
 desc "Generate jekyll site"
 task :generate do
   puts "## Generating Site with Jekyll"
-  system "jekyll"
+  system "time jekyll"
 end
 
 desc "Watch the site and regenerate when it changes"
@@ -100,6 +100,7 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
     end
+    system "mvim #{filename}"
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
