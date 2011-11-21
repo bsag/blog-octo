@@ -1,0 +1,20 @@
+---
+layout: post
+title: "I Can See Clearly Now"
+date: 2011-11-12 16:21
+comments: true
+categories: [mumblings] 
+---
+
+We've been meaning to do it for ages. Every time we looked at our ratty windows, we thought, "We really need to replace those windows." But, for a long time, we didn't. It was a big hassle, an upheaval, and most of all, it was going to be expensive and we had to save. Then we had to get our soffits and facias replaced before the mouldy, rotten things started to let water into the roof and cause us even more expense. That was also a hassle and upheaval (though confined to the outside of the house). However, when it was finished, the suddenly gleaming facia boards threw our rotten windows into stark relief. I've come to think of it as a kind of alternative [Right Said Fred][] process, in which every improvement you make to your house necessitates further improvements because the rest of your house now looks much worse in contrast. 
+
+The windows were probably installed when the house was built. They were in fact double glazing units, but very thin and poor insulators by modern standards. What's more, at some point, the seals on the units failed, so they collected condensation between the panes. They had wooden frames, and while I generally like wood, these were apparently cheap pine doing a bad impersonation of very dark mahogany, and they made the house look even more gloomy than it actually is, inside and out. They had been poorly maintained, and although we tried to patch up the rotten bits, it was a losing battle. They were warped and swollen and you had to put your shoulder to the windows to open them, running the risk of plummeting from an upstairs window every time. The time had come to pay the money and get them replaced with modern, white UPVC units. I'm not really a fan of UPVC, but we certainly didn't have the money to install eco-friendly windows with nice oak frames, so UPVC it had to be.
+
+We had the windows installed last week, and it has made an amazing difference. It's incredible how much lighter it seems in the house, just because the frames are white rather than dark brown. The windows open easily and lock securely, and when I approach the house from outside, it actually looks like a nice, well-maintained house rather than a bit of a dump. It's also a lot warmer (and quieter) in the house, we we've been able to turn the heating down. I can't believe we didn't do it earlier.
+
+We did have to put the cats into the cattery for a couple of nights. They are house cats with absolutely no road sense, and it would have been really stressful for us trying to confine them in the rooms that still had windows, not to mention the fact that all the drilling would have freaked them out. The cattery is a very nice place, run by a lovely woman, and they don't seem to mind being there too much. Their initial reactions are always hilarious though. Bianca trots straight out the carrying box, sees the cat activity centre thing and roars straight up it, really excited. Bella, though she acts the alpha cat, is a total chicken at heart, and reluctantly slinks out of the box. When we closed the door of the run and got ready to leave, she looked up at me with enormous eyes and droopy ears (exactly like [this][]), and if you'll forgive a bit of LOLCAT anthropomorphism for a moment, seemed to be saying "WHY U LEEVE ME HEER IN THIS PLACE WIV NO CARPET?".
+
+When we got back after the work had been completed, they both were magnificently unimpressed with the new windows, but very pleased to be home. Bella snuggled up on my lap at the earliest opportunity, and when we temporarily misplaced Bianca later, we eventually found her snuggled under the duvet on our bed, with just the top of her head visible as it rested gently on Mr. Bsag's pillow. They were glad to have their home back, and so are we.
+
+[Right Said Fred]: http://www.youtube.com/watch?v=r5XX9LX2es4 "Animated video of the Bernard Cribbins song"
+[this]: http://www.youtube.com/watch?v=sMXNWPGqVG8 "Clip of Puss in Boots doing the Big Eye thing"
