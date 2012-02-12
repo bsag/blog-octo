@@ -28,7 +28,7 @@ internet about coffee[^1], I stumbled on a suggestion that higher
 brewing temperatures can bring out the 'darker' flavours, while lower
 temperatures emphasise the more delicate, fruity ones. I had to
 try it out. Keeping all the other variables as constant as I possibly
-could, I changed the set point of my PID to 5&deg;C higher than its
+could, I changed the set point of my PID to 3&deg;C higher than its
 previous setting. I did this in the evening before going to bed, so that
 I wouldn't forget to make the change in the morning. It's an indication
 of how sadly nerdy, I mean, _deeply fascinated_ I have become with the
@@ -42,7 +42,7 @@ and by the heavenly smell, but the first sip confirmed it. It was rich
 and spicy with lovely bitter chocolate notes, but that was balanced by
 the fruity tang I had before. It was even a different texture, with
 much more body and viscosity. All that transformation from a change of
-5&deg;C. This morning I even managed to produce the kind of _crema_ on
+3&deg;C. This morning I even managed to produce the kind of _crema_ on
 the top that you see in all the coffee pr0n photos and videos: a deep,
 caramel or hazelnut coloured gloopy liquid, spotted with paler colours.
 I was so excited that I yelled at Mr. Bsag, "COME AND LOOK AT MY CREMA!
@@ -55,6 +55,9 @@ Next, I will conquer microfoam!
 
 Oh dear. I think I may be hooked. On the positive side, it does make getting up
 at a stupidly early hour much more interesting.
+
+_Edited to correct the temperature difference, because apparently I can't do
+arithmetic when highly-caffeinated._
 
 
 
