@@ -1,13 +1,12 @@
+<!-- Piwik --> 
 <script type="text/javascript">
-  var _gauges = _gauges || [];
-  (function() {
-   var t   = document.createElement('script');
-   t.type  = 'text/javascript';
-   t.async = true;
-   t.id    = 'gauges-tracker';
-   t.setAttribute('data-site-id', '4f365902613f5d5277000016');
-   t.src = '//secure.gaug.es/track.js';
-   var s = document.getElementsByTagName('script')[0];
-   s.parentNode.insertBefore(t, s);
-   })();
-</script>
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.rousette.org.uk/" : "http://stats.rousette.org.uk/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+</script><noscript><p><img src="http://stats.rousette.org.uk/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Tracking Code -->
