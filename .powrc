@@ -1,0 +1,1 @@
+export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/bin:/usr/texbin:/usr/local/bin:/sbin:/usr/sbin:/usr/bin:/bin:/opt/X11/bin

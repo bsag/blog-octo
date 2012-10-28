@@ -1,42 +1,29 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
-/* Over-ride fonts for Typekit */
-.heading {
-  font-family: "museo-slab-1", "museo-slab-2", Arial, Verdana, sans-serif;
-}
-
-.sans {
-  font-family: "museo-slab-1", "museo-slab-2", Arial, Verdana, sans-serif;
-}
-
-.serif {
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Palatino, Georgia, Times, serif;
-}
-
-/* Override link typography for links within sup elements */
-
-i { font-style: italic; }
-b { font-weight: bold; }
-
-/* Styling of footnote indicators */
-sup a, sub a { font-size: 0.8em; position: relative;  display: inline-block; }
-sup a { top: -.5em; }
-sub a { bottom: -.5em; }
-
-/* Box shadow for main body */
-body {
-  -moz-box-shadow: 3px 3px 10px #CCC;
-  -webkit-box-shadow: 3px 3px 10px #CCC; 
-  -box-shadow: 3px 3px 10px #CCC;
-}  
-
-/*
+// Reduce overall font size somewhat
 @media only screen and (min-width: 992px) {
   body { font-size: 1em; }
   h1 { font-size: 2.0em; line-height: 1.2em; }
 }
-*/
+
+// Override link typography for links within sup elements
+i { font-style: italic; }
+b { font-weight: bold; }
+
+// Styling of footnote indicators
+sup a, sub a { font-size: 0.8em; position: relative;  display: inline-block; }
+sup a { top: -.5em; }
+sub a { bottom: -.5em; }
+
+// Box shadow for main content
+body {
+  -moz-box-shadow: 3px 3px 10px #CCC;
+  -webkit-box-shadow: 3px 3px 10px #CCC; 
+  -box-shadow: 3px 3px 10px #CCC;
+}
+
+// Styling the header image, title and subtitle
 body > header {
   background: $header-bg image-url('fruitbat-cropped.png') 25px 0px;
   background-repeat: no-repeat;
@@ -48,20 +35,15 @@ body > header {
     margin: 0;
     margin-left: 4em;
     font-size: 2em;
-    a, a:visited, a:hover {
-      color: $title_color;
-      text-decoration: none;
-    }
   }
   h2 {
     margin-left: 8em;
-    @extend .sans;
     font-size: 1em;
-    color: $subtitle-color;
     font-style: italic;
   }
 }
 
+// Styling of each article, including meta-data
 article {
   > footer.top {
     padding-bottom: 1.5em;
@@ -81,6 +63,7 @@ article {
   }
 }
 
+// Styling of the footnotes
 .footnotes {
   border-top: 1px solid #CCC; 
   padding-top: 10px;
@@ -90,4 +73,3 @@ article {
         a { text-decoration: none; }
       } 
 }
-
