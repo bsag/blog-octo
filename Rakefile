@@ -7,7 +7,7 @@ require "stringex"
 ssh_user       = "bsag@rousette.org.uk"
 document_root  = "/srv/http/rousette.org.uk/public_html/blog"
 ssh_port       = "22"
-rsync_delete   = true
+rsync_delete   = false
 deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
