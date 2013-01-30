@@ -1,3 +1,4 @@
+
 // App.net post fetcher, modified from Brandon Mathis' Twitter script for Octopress
 // Uses jFeed: https://github.com/jfhovinne/jFeed
 //
@@ -43,7 +44,7 @@ function prettyDate(time) {
 function getADNFeed() {
 
   jQuery.getFeed({
-      url: 'data/adn.xml',
+      url: '/blog/data/adn.xml',
       error: function (err) { $('#adn li.loading').addClass('error').text("Something is broken"); },
       success: function(feed, count) { 
         var timeline = document.getElementById('adn'), content = '';
