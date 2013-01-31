@@ -1,3 +1,4 @@
+{% if site.adn_user %}
 <section>
   <h1>App.net posts</h1>
   <ul id="adn">
@@ -6,10 +7,11 @@
 
   <script type="text/javascript">
     $.domReady(function(){
-      getADNFeed();
+      getADNFeed("{{ site.adn_cache_path }}", {{ site.adn_post_count }});
     });
   </script>
 
   <script src="{{ root_url }}/javascripts/adn.js" type="text/javascript"> </script>
-  <a href="https://alpha.app.net/bsag">Follow @bsag on ADN</a>  
+  <a href="https://alpha.app.net/{{ site.adn_user }}">Follow @{{ site.adn_user }} on ADN</a>  
 </section>
+{% endif %}

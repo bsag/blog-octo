@@ -75,6 +75,11 @@ twitter_follow_button: true
 twitter_show_follower_count: false
 twitter_tweet_button: true
 
+# App.net
+adn_user: bsag
+adn_post_count: 5
+adn_cache_path: "/blog/data/adn.xml"
+
 # Google +1
 google_plus_one: false
 google_plus_one_size: medium

@@ -41,15 +41,15 @@ function prettyDate(time) {
     day_diff > 7 && Math.ceil(day_diff / 7) + say.weeks_ago;
 }
 
-function getADNFeed() {
+var getADNFeed = function (cachedFeed, count) {
 
   jQuery.getFeed({
-      url: '/blog/data/adn.xml',
+      url: cachedFeed,
       error: function (err) { $('#adn li.loading').addClass('error').text("Something is broken"); },
-      success: function(feed, count) { 
+      success: function(feed) { 
         var timeline = document.getElementById('adn'), content = '';
 
-        for(var i = 0; i < feed.items.length && i < 5; i++) {
+        for(var i = 0; i < feed.items.length && i < count; i++) {
         
             var item = feed.items[i];
             var pubDate = new Date(item.updated);
