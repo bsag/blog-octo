@@ -16,13 +16,15 @@ You can see the details of what I did in [this commit][2] if you want to try to 
 */30 * * * * /usr/bin/curl https://alpha-api.app.net/feed/rss/users/@bsag/posts -o /MYPATH/data/adn.xml
 ```
 
-I then use [jFeed][3] together with a Javascript (`javascripts/adn.js`) which I cobbled together relying heavily to the similar twitter.js written by [Brandon Mathis][4]:
+I then use [jFeed][3] together with a Javascript (`javascripts/adn.js`) which I cobbled together relying heavily to the similar twitter.js written by [Brandon Mathis][4]. This reads the cached RSS feed and uses jQuery to write HTML to the sidebar, via a custom aside (`source/_includes/custom/asides.adn.html`), which again, was more or less copied with a few tweaks from Brandon's original Twitter aside that's included in the Octopress installation. The aside pulls in a few simple configuration variables from `_config.yml`.
 
 {% gist 4676656 %}
 
-This reads the cached RSS feed and uses jQuery to write HTML to the sidebar, via a custom aside (`source/_includes/custom/asides.adn.html`), which again, was more or less copied with a few tweaks from Brandon's original Twitter aside that's included in the Octopress installation. Apart from a few tweaks to CSS and to the lines calling jQuery to prevent conflicts between the javascripts, that's about it. If you deploy your blog using rsync, you'll also need to modify your `Rakefile` to make sure that rsync doesn't delete your server side data directory containing the RSS file every time you deploy your site.
+ Apart from a few tweaks to CSS and to the lines calling jQuery to prevent conflicts between the javascripts, that's about it. If you deploy your blog using rsync, you'll also need to modify your `Rakefile` to make sure that rsync doesn't delete your server side data directory containing the RSS file every time you deploy your site.
 
 At some point, I might package this up into a separate distribution with step-by-step instructions, but hopefully this will point anyone else interested in doing this in the right direction. As I said, I hope that at some point someone will put together something a bit more elegant and less hacky, but this works for now.
+
+**Updated 2013-01-31**: I've removed much of the hackiness from the script now, so there's no hard-coding. You can specify the relevant configuration variables in your `_config.yml` and everything should work as expected.
 
 [1]: http://alpha.app.net/
 [2]: https://github.com/bsag/blog-octo/commit/ff19e1eaf21e440eebdee8ffd001370278bf4a59
