@@ -21,11 +21,13 @@ I like every track on the album, but the final, 10 minute-long track, 'Brazos', 
 
 On top of this, more and more layers of sound are woven in, with gospel singers, brass crescendos, people humming, drums, tambourines and goodness knows what else stacked up in the mix. It's repetitive but never boring, because it's so rich and variable. There's a startling handclap that comes in when you least expect it, which almost made me jump out of my skin on my snowy walk home. It's mesmerising, all-enveloping and uplifting, and the most extraordinary track I've heard in a while.
 
+**Updated 2013-03-07**: Replaced link with Matthew E. White's own webpage - thanks et!
+
 [^1]: For example, I'm listening to 'Big Love' while writing this, and bopping around so much that it's hard to type.
 
 [^2]: I first listened to Kate Bush's 'Breathing' on my Walkman while I did my brother's paper round for him, and still think of the stark contrast between comfortable suburbia and the terrifying lyrics every time I listen to it.
 
 [^3]: And really made me want a whisky toddy.
 
-[1]: http://www.amazon.co.uk/Big-Inner-Matthew-E-White/dp/B00AKQCH78/ref=sr_1_1?ie=UTF8&qid=1362326977&sr=8-1
+[1]: http://matthewewhite.tumblr.com/
 [2]: http://www.georgegraham.com/compress.html
