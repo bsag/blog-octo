@@ -9,6 +9,7 @@ document_root  = "/srv/http/rousette.org.uk/public_html/blog"
 ssh_port       = "22"
 rsync_delete   = false
 deploy_default = "rsync"
+urilv_name     = "butshesagirl" # the short feed code for your feed in URI.LV
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -216,11 +217,45 @@ task :deploy do
   end
 
   Rake::Task[:copydot].invoke(source_dir, public_dir)
-  Rake::Task["#{deploy_default}"].execute
+  Rake::Task["#{deploy_default}"].execute  
 end
 
 desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
+end
+
+desc "Ping Pubsubhubbub and URI.LV to notify about new content"
+task :ping do
+  require 'httparty'
+
+  atom_url = 'http://rousette.org.uk/blog/feeds/recent_articles.xml'
+
+  # Notify the Pubsubhubbub hub with the url of the updated Atom feed
+  resp = HTTParty.post( 'http://pubsubhubbub.appspot.com/', :body => {:'hub.mode' => 'publish', :'hub.url' => atom_url} )
+
+  if resp.code == 204
+    puts "==> Notified hub Pubsubhubbub that feed #{atom_url} has been updated."
+  else
+    puts "Error: Notification rejected (#{resp.code} - #{resp.message})"
+  end
+
+  # Now ping URI.LV to notify of updated feed
+  # Add the URI.LV key and token as environmental variables in your shell 
+  # via a ~/.secrets file that you source in .bashrc or .zshrc
+  # Specify urilv_name (short feed code) in the deploy configs at the top of the Rakefile
+  mykey = ENV['URILV_KEY']
+  mytoken = ENV['URILV_TOKEN']
+  ping = HTTParty.get( 'http://api.uri.lv/feeds/ping.json', {:query => {:key => mykey, :token => mytoken, :feed => urilv_name}} )
+
+  if ping.code == 200
+    puts "==> Pinged URI.LV successfully. #{ping['message']}"
+  else
+    puts "Error: Ping rejected (#{ping.code} - #{ping.message})"
+  end
+end
+
+desc "Ping and deploy"
+task :ping_deploy => [:deploy, :ping] do
 end
 
 desc "copy dot files for deployment"
