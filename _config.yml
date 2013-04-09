@@ -23,6 +23,9 @@ subscribe_email:
 # RSS feeds can list your email address if you like
 email:
 
+# Pubsubhubbub info
+hub_url: http://pubsubhubbub.appspot.com/
+
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
