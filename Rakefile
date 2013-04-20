@@ -228,6 +228,21 @@ desc "Ping Pubsubhubbub and URI.LV to notify about new content"
 task :ping do
   require 'httparty'
 
+  # Ping URI.LV to notify of updated feed
+  # Add the URI.LV key and token as environmental variables in your shell 
+  # via a ~/.secrets file that you source in .bashrc or .zshrc
+  # Specify urilv_name (short feed code) in the deploy configs at the top of the Rakefile
+  mykey = ENV['URILV_KEY']
+  mytoken = ENV['URILV_TOKEN']
+  
+  ping = HTTParty.get( 'http://api.uri.lv/feeds/ping.json', {:query => {:key => mykey, :token => mytoken, :feed => urilv_name}} )
+
+  if ping.code == 200
+    puts "==> Pinged URI.LV successfully. #{ping['message']}"
+  else
+    puts "Error: Ping rejected (#{ping.code} - #{ping.message})"
+  end
+
   atom_url = 'http://rousette.org.uk/blog/feeds/recent_articles.xml'
 
   # Notify the Pubsubhubbub hub with the url of the updated Atom feed
@@ -237,20 +252,6 @@ task :ping do
     puts "==> Notified hub Pubsubhubbub that feed #{atom_url} has been updated."
   else
     puts "Error: Notification rejected (#{resp.code} - #{resp.message})"
-  end
-
-  # Now ping URI.LV to notify of updated feed
-  # Add the URI.LV key and token as environmental variables in your shell 
-  # via a ~/.secrets file that you source in .bashrc or .zshrc
-  # Specify urilv_name (short feed code) in the deploy configs at the top of the Rakefile
-  mykey = ENV['URILV_KEY']
-  mytoken = ENV['URILV_TOKEN']
-  ping = HTTParty.get( 'http://api.uri.lv/feeds/ping.json', {:query => {:key => mykey, :token => mytoken, :feed => urilv_name}} )
-
-  if ping.code == 200
-    puts "==> Pinged URI.LV successfully. #{ping['message']}"
-  else
-    puts "Error: Ping rejected (#{ping.code} - #{ping.message})"
   end
 end
 
