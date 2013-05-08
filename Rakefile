@@ -8,6 +8,7 @@ ssh_user       = "bsag@rousette.org.uk"
 document_root  = "/srv/http/rousette.org.uk/public_html/blog"
 ssh_port       = "22"
 rsync_delete   = false
+rsync_args     = ""
 deploy_default = "rsync"
 urilv_name     = "butshesagirl" # the short feed code for your feed in URI.LV
 
@@ -18,6 +19,7 @@ deploy_branch  = "gh-pages"
 
 public_dir   = "public/blog"    # compiled site directory
 source_dir   = "source"    # source file directory
+blog_index_dir  = 'source'
 deploy_dir   = "_deploy"   # deploy directory (for Github pages deployment)
 stash_dir    = "_stash"    # directory to stash posts for speedy generation
 posts_dir    = "_posts"    # directory for blog files

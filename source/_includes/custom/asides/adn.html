@@ -1,17 +1,9 @@
-{% if site.adn_user %}
+{% if site.adn_timeline.username %}
 <section>
-  <h1>App.net posts</h1>
-  <ul id="adn">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-
-  <script type="text/javascript">
-    $.domReady(function(){
-      getADNFeed("{{ site.adn_cache_path }}", {{ site.adn_post_count }});
-    });
-  </script>
-
-  <script src="{{ root_url }}/javascripts/adn.js" type="text/javascript"> </script>
-  <a href="https://alpha.app.net/{{ site.adn_user }}">Follow @{{ site.adn_user }} on ADN</a>  
+<h1>App.net posts</h1>
+{% adn_timeline %}
+<p>
+  Follow <a href="https://alpha.app.net/{{ site.adn_timeline.username }}">@{{ site.adn_timeline.username }}</a>.
+</p>
 </section>
 {% endif %}
